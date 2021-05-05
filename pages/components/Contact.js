@@ -1,6 +1,6 @@
 export default function Contact() {
     return (
-        <div>
+        <div data-aos="fade-down">
             <div class="lg:w-1/3 lg:mx-auto rounded-lg bg-white text-center border-t-4 border-blue-600 -mb-80 relative shadow-lg mx-4">
                 <div class="px-6 lg:w-80 w-64 mx-auto flex justify-center py-16">
                     <img src="undraw_contact_us_15o2.svg" />

@@ -1,6 +1,8 @@
+import Link from 'next/link'
+
 export default function Hero() {
     return (
-      <div class="lg:container">
+      <div class="lg:container" data-aos="fade-down">
             <div class="lg:flex lg:justify-between lg:py-20 lg:p-0 p-7">
                 <div class="lg:hidden">
                     <img src="undraw_co-working_825n.svg" class="lg:ml-28" />
@@ -13,11 +15,12 @@ export default function Hero() {
                         Računovodstvena agencija Mediteran Cvijeta Panić vam pruža  veliki asortiman usluga: računovodstvo, knjigovodstvo, elektronsko poslovanje i brojne druge.
                     </p>
                     <div class="mt-12">
-                        <a href="#"
-                        class="btn btn-blue lg:mb-0 mb-3  mr-5">
-                        Kontaktirajte nas</a>
-                        <a href="#"
-                        class="btn btn-white">Saznajte više</a>
+                        <Link href="/contact">
+                            <a class="btn btn-blue lg:mb-0 mb-3  mr-5">Kontaktirajte nas</a>
+                        </Link>
+                        <Link href="/about">
+                            <a class="btn btn-white">Saznajte više</a>
+                        </Link>
                     </div>
                 </div>
                 <div class="lg:w-1/2 lg:flex hidden">

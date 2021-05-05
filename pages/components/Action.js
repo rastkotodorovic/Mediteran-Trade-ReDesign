@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Action() {
     return (
         <div class="action-image">
@@ -7,7 +9,9 @@ export default function Action() {
                     <p class="paragraph text-center lg:px-0 px-4 lg:mb-2 mb-6">Prvi mjesec naših knjigovodstvenih usluga je besplatan.</p>
                 </div>
                 <div class="lg:1/4 text-center lg:mt-0 mt-10">
-                    <a href="#" class="lg:items-center paragraph text-white border-2 rounded-full border-white px-6 py-3">Pišite nam</a>
+                    <Link href="/contact">
+                        <a class="lg:items-center paragraph text-white border-2 rounded-full border-white px-6 py-3">Pišite nam</a>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -6,9 +6,14 @@ export default function Header() {
         <div class="lg:flex lg:justify-between lg:py-6 flex flex-wrap justify-between items-center py-2">
             <div class="flex items-center">
                 <img src="141717329_497060598353545_4877675544851051058_n.gif" class="w-14 pt-1" />
-                <h1 class="text-2xl font-extrabold text-blue-600">
-                    Mediteran
-                </h1>
+                <Link href="/">
+                    <a>
+                        <h1 class="text-2xl font-extrabold text-blue-600">
+                            Mediteran
+                        </h1>
+                    </a>
+                </Link>
+
             </div>
 
             <label for="menu-toggle" class="cursor-pointer lg:hidden block p-4"><svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></label>
