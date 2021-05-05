@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply inline-block rounded-lg px-5 py-3 shadow-lg;
+      }
+
+    .btn-blue {
+      @apply bg-blue-600 text-white hover:bg-blue-400 transition duration-100;
+    }
+
+    .btn-white {
+        @apply bg-white  hover:bg-blue-600 hover:text-white transition duration-100;
+      }
+
+    .h1 {
+        @apply text-gray-800 lg:text-3xl text-2xl leading-snug;
+    }
+
+    .title {
+        @apply text-xl font-medium;
+    }
+
+
+    .paragraph {
+        @apply font-light text-gray-400 text-base lg:leading-relaxed leading-loose;
+    }
+
+    .blog-title {
+        @apply text-lg font-medium;
+    }
+
+    .blog-paragraph {
+        @apply text-sm text-gray-400 lg:leading-relaxed leading-loose;
+    }
+  }
+
+  @layer utilities {
+    .action-image {
+        background : linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("../public/anthony-esau-N2zk9yXjmLA-unsplash.jpg") fixed center;
+    }
+    .contact-color {
+        background-color : #1B2A4E;
+    }
+    .footer-color {
+      background-color : #1B2A4E;
+    }
+    .map {
+      border: 0;
+    }
+    .hero-2 {
+      background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url('../public/anthony-esau-N2zk9yXjmLA-unsplash.jpg') fixed center
+    }
+  }

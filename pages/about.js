@@ -1,16 +1,11 @@
 import Head from 'next/head'
 import Header from './components/Header.js'
-import Hero from './components/Hero.js'
+import Hero2 from './components/Hero2.js'
 import Section from './components/Section.js'
 import Location from './components/Location.js'
 import About from './components/About.js'
-import Services from './components/Services.js'
-import Action from './components/Action.js'
-import News from './components/News.js'
-import Info from './components/Info.js'
-import Contact from './components/Contact.js'
 
-export default function Home() {
+export default function AboutPage() {
     return (
         <div>
             <Head>
@@ -19,19 +14,11 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
                 <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet" />
             </Head>
-            <div class="bg-gradient-to-br from-white to-blue-50">
-                <Header />
-                <Hero />
-            </div>
+            <Header />
+            <Hero2 />
             <Section />
             <Location />
             <About />
-            <Services />
-            <Action />
-            <News />
-            <Info />
-            <hr class="mb-32" />
-            <Contact />
         </div>
         )
     }
