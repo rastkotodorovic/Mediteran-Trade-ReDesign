@@ -12,16 +12,16 @@ function MyApp({ Component, pageProps }) {
         });
     }, []);
 
-    return (
-        <div>
-            <Head>
-                <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet" />
-                <link rel="icon" href="141717329_497060598353545_4877675544851051058_n.gif" />
-            </Head>
-            <Component {...pageProps} />
-            <Footer />
-        </div>
-        )
-    }
+return (
+    <div>
+        <Head>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet" />
+            <link rel="icon" href="141717329_497060598353545_4877675544851051058_n.gif" />
+        </Head>
+        <Component {...pageProps} />
+        <Footer />
+    </div>
+    )
+}
 
-    export default MyApp
+export default MyApp
