@@ -5,7 +5,7 @@ export default function Header() {
     <div className="lg:container">
         <div className="lg:flex lg:justify-between lg:py-6 flex flex-wrap justify-between items-center py-2">
             <div className="flex items-center">
-                <img src="141717329_497060598353545_4877675544851051058_n.gif" className="w-14 pt-1" />
+                <img src="/141717329_497060598353545_4877675544851051058_n.gif" className="w-14 pt-1" />
                 <Link href="/">
                     <a>
                         <h1 className="text-2xl font-extrabold text-blue-600">

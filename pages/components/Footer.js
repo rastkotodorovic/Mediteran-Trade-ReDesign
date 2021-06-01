@@ -7,7 +7,7 @@ export default function Footer() {
                 <div className="lg:grid lg:grid-cols-3 lg:gap-8 lg:py-28 py-16">
                     <div className="lg:pb-0 pb-10">
                         <div className="flex pb-2 items-center">
-                            <img src="141717329_497060598353545_4877675544851051058_n.gif" className="w-14" />
+                            <img src="/141717329_497060598353545_4877675544851051058_n.gif" className="w-14" />
                             <h2 className="paragraph pb-1">Mediteran</h2>
                         </div>
                         <p className="paragraph lg:pl-3 pl-6">A better way to build</p>

@@ -5,7 +5,7 @@ export default function Hero() {
       <div className="lg:container" data-aos="fade-down">
             <div className="lg:flex lg:justify-between lg:py-20 lg:p-0 p-7">
                 <div className="lg:hidden">
-                    <img src="undraw_co-working_825n.svg" className="lg:ml-28" />
+                    <img src="/undraw_co-working_825n.svg" className="lg:ml-28" />
                 </div>
                 <div className="lg:w-1/2 pt-7">
                     <h2 className="h1">
@@ -24,7 +24,7 @@ export default function Hero() {
                     </div>
                 </div>
                 <div className="lg:w-1/2 lg:flex hidden">
-                    <img src="undraw_co-working_825n.svg" className="lg:ml-28" />
+                    <img src="/undraw_co-working_825n.svg" className="lg:ml-28" />
                 </div>
             </div>
             <div className="lg:flex mt-6 lg:p-0 lg:pb-12 p-7">

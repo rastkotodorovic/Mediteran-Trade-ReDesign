@@ -10,7 +10,7 @@ export default function ArticleItem({ article }) {
                     <hr />
                 </div>
                 <div className="w-1/2">
-                    <img src="sean-pollock-PhYq704ffdA-unsplash.jpg" alt="" className="rounded-r-lg" />
+                    <img src="/sean-pollock-PhYq704ffdA-unsplash.jpg" alt="" className="rounded-r-lg" />
                 </div>
             </div>
         </Link>

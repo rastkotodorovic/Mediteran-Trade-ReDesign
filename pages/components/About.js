@@ -5,7 +5,7 @@ export default function About() {
         <div className="container lg:mb-56 mb-24" data-aos="fade-down">
             <div className="lg:flex lg:justify-between">
                 <div className="lg:w-1/2 lg:mr-32 p-6">
-                    <img src="undraw_quitting_time_dm8t.svg" alt="" />
+                    <img src="/undraw_quitting_time_dm8t.svg" alt="" />
                 </div>
                 <div className="lg:w-1/2 lg:pt-0 pt-4 lg:px-0 px-4">
                     <div className="pb-5">

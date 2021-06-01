@@ -10,7 +10,7 @@ import News from './components/News.js'
 import Info from './components/Info.js'
 import Contact from './components/Contact.js'
 
-export default function Home() {
+export default function Home({ articles }) {
     return (
         <div>
             <Head>
@@ -26,12 +26,22 @@ export default function Home() {
             <About />
             <Services />
             <Action />
-            <News />
+            <News articles={ articles } />
             <Info />
-            <hr class="mb-32" />
+            <hr className="mb-32" />
             <Contact />
         </div>
-        )
+    )
+}
 
+export const getStaticProps = async () => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=3');
+    const articles = await response.json();
+
+    return {
+        props: {
+            articles
+        }
     }
+};
 
