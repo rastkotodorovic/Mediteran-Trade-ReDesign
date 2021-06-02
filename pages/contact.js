@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import Header from './components/Header.js'
-import Hero2 from './components/Hero2.js'
-import Info from './components/Info.js'
-import Contact from './components/Contact.js'
+import Header from '../components/Header.js'
+import Hero2 from '../components/Hero2.js'
+import Info from '../components/Info.js'
+import Contact from '../components/Contact.js'
 
 export default function ContactPage() {
     return (

@@ -1,20 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router'
 import { connect } from 'react-redux';
 import { fetchArticles, fetchArticle } from '../../../redux/actions';
 
 import Head from 'next/head'
-import Header from '../../components/Header'
-import Hero2 from '../../components/Hero2'
-import ArticleData from '../../components/ArticleData'
+import Header from '/components/Header'
+import Hero2 from '/components/Hero2'
+import ArticleData from '/components/ArticleData'
 
 function Article({ article, fetchArticle, articles, fetchArticles }) {
-    const router = useRouter()
-    const { id } = router.query
-
     useEffect(() => {
-        fetchArticles();
+        const id = window.location.href.split('/').pop();
+
         fetchArticle(id);
+        fetchArticles();
     }, []);
 
     return (

@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import Header from './components/Header.js'
-import Hero2 from './components/Hero2.js'
-import Section from './components/Section.js'
-import Location from './components/Location.js'
-import About from './components/About.js'
+import Header from '../components/Header.js'
+import Hero2 from '../components/Hero2.js'
+import Section from '../components/Section.js'
+import Location from '../components/Location.js'
+import About from '../components/About.js'
 
 export default function AboutPage() {
     return (

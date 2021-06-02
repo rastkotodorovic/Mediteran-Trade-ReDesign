@@ -1,13 +1,15 @@
-import '../styles/index.css'
-import Footer from './components/Footer.js'
 import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import Head from 'next/head'
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import reducers from '../redux/reducers';
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import '../styles/index.css'
+import Head from 'next/head'
+import Footer from '../components/Footer.js'
+
 
 const store = createStore(reducers, applyMiddleware(thunk));
 

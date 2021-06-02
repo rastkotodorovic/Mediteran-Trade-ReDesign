@@ -3,16 +3,16 @@ import { connect } from 'react-redux';
 import { fetchArticles } from '../redux/actions';
 
 import Head from 'next/head'
-import Header from './components/Header.js'
-import Hero from './components/Hero.js'
-import Section from './components/Section.js'
-import Location from './components/Location.js'
-import About from './components/About.js'
-import Services from './components/Services.js'
-import Action from './components/Action.js'
-import News from './components/News.js'
-import Info from './components/Info.js'
-import Contact from './components/Contact.js'
+import Header from '../components/Header.js'
+import Hero from '../components/Hero.js'
+import Section from '../components/Section.js'
+import Location from '../components/Location.js'
+import About from '../components/About.js'
+import Services from '../components/Services.js'
+import Action from '../components/Action.js'
+import News from '../components/News.js'
+import Info from '../components/Info.js'
+import Contact from '../components/Contact.js'
 
 function Home({ articles, fetchArticles }) {
     useEffect(() => {

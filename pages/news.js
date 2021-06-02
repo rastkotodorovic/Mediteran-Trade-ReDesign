@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { fetchArticles } from '../redux/actions';
 
 import Head from 'next/head'
-import Header from './components/Header'
-import ArticleList from './components/ArticleList'
-import Hero2 from './components/Hero2'
+import Header from '../components/Header'
+import ArticleList from '../components/ArticleList'
+import Hero2 from '../components/Hero2'
 
 function News({ articles, fetchArticles }) {
     useEffect(() => {
