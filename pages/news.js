@@ -1,16 +1,33 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { fetchArticles } from '../redux/actions';
+import { fetchArticles, fetchPages } from '../redux/actions';
 
 import Head from 'next/head'
 import Header from '../components/Header'
 import ArticleList from '../components/ArticleList'
 import Hero2 from '../components/Hero2'
 
-function News({ articles, fetchArticles }) {
+function News({ articles, fetchArticles, pages, fetchPages }) {
+    const [ page, setPage ] = useState(1);
+    const [ leftDisabled, setLeftDisabled ] = useState(false);
+    const [ rightDisabled, setRightDisabled ] = useState(false);
+
     useEffect(() => {
-        fetchArticles();
-    }, []);
+        fetchArticles(page);
+        fetchPages();
+
+        if (page === 1) {
+            setLeftDisabled(true)
+        } else {
+            setLeftDisabled(false)
+        }
+
+        if (page === pages) {
+            setRightDisabled(true)
+        } else {
+            setRightDisabled(false)
+        }
+    }, [page]);
 
     return (
         <div>
@@ -22,17 +39,28 @@ function News({ articles, fetchArticles }) {
                 <Header />
                 <Hero2 />
                 <ArticleList articles={articles} />
+                <div>
+                    <button className="mr-3" disabled={leftDisabled} onClick={() => setPage(page - 1)}>
+                        Left
+                    </button>
+                    <button disabled={rightDisabled} onClick={() => setPage(page + 1)}>
+                        Right
+                    </button>
+                </div>
             </div>
         </div>
     )
 }
 
 const mapStateToProps = state => {
-    return { articles: state.articles };
+    return {
+        articles: state.articles,
+        pages: state.pages
+    };
 };
 
 export default connect(
     mapStateToProps,
-    { fetchArticles }
+    { fetchArticles, fetchPages }
 )(News);
 

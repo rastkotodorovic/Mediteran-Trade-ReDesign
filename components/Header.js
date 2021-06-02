@@ -36,7 +36,7 @@ export default function Header() {
                         </Link>
                         </li>
                     <li>
-                        <Link href="/news">
+                        <Link href="/news?page=1">
                             <a className="lg:my-0 my-2 inline-block lg:mx-12 transition duration-100 hover:text-blue-300 lg:ml-0 ml-3">
                                 Vijesti
                             </a>
