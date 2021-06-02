@@ -14,7 +14,7 @@ export default function News({ articles }) {
 
                 <div className="lg:grid lg:grid-cols-3 lg:gap-8">
                     { articles.map( article => (
-                        <div className="bg-white shadow-md rounded-lg lg:mb-0 mb-6">
+                        <div className="bg-white shadow-md rounded-lg lg:mb-0 mb-6"  key={ article.id }>
                             <div>
                                 <img src="/anthony-esau-N2zk9yXjmLA-unsplash.jpg" className="rounded-t-lg" />
                             </div>

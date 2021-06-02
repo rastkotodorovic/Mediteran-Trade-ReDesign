@@ -7,7 +7,7 @@ export default function ArticleList({ articles }) {
             <section className="container py-16">
                 {articles.map(article => (
                     <div>
-                        <ArticleItem article={ article } />
+                        <ArticleItem article={ article }  key={ article.id } />
                     </div>
                 ))}
             </section>

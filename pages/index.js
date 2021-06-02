@@ -1,3 +1,7 @@
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { fetchArticles } from '../redux/actions';
+
 import Head from 'next/head'
 import Header from './components/Header.js'
 import Hero from './components/Hero.js'
@@ -10,7 +14,11 @@ import News from './components/News.js'
 import Info from './components/Info.js'
 import Contact from './components/Contact.js'
 
-export default function Home({ articles }) {
+function Home({ articles, fetchArticles }) {
+    useEffect(() => {
+        fetchArticles();
+    }, []);
+
     return (
         <div>
             <Head>
@@ -34,14 +42,13 @@ export default function Home({ articles }) {
     )
 }
 
-export const getStaticProps = async () => {
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=3');
-    const articles = await response.json();
-
-    return {
-        props: {
-            articles
-        }
-    }
+const mapStateToProps = state => {
+    return { articles: state.articles };
 };
+
+export default connect(
+    mapStateToProps,
+    { fetchArticles }
+)(Home);
+
 
