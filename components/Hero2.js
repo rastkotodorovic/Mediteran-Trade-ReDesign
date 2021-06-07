@@ -1,10 +1,10 @@
-export default function Hero2() {
+export default function Hero2({ title, body }) {
     return (
         <div className="hero-2" data-aos="fade-down">
             <div className="container">
                 <div className="text-center lg:py-48 py-36">
-                    <h2 className="text-white text-5xl mb-7">We’re Here to Help.</h2>
-                    <p className="text-gray-300 lg:px-48 px-8 lg:text-md text-sm leading-relaxed">We always want to hear from you! Let us know how we can best help you and we'll do our very best.</p>
+                    <h2 className="text-white text-5xl mb-7">{ title }</h2>
+                    <p className="text-gray-300 lg:px-48 px-8 lg:text-md text-sm leading-relaxed">{ body }</p>
                 </div>
             </div>
         </div>

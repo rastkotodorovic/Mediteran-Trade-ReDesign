@@ -1,33 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { fetchArticles, fetchPages } from '../redux/actions';
+import { fetchArticles } from '../redux/actions';
+import { useRouter } from 'next/router';
+import Router from 'next/router';
 
 import Head from 'next/head'
 import Header from '../components/Header'
 import ArticleList from '../components/ArticleList'
 import Hero2 from '../components/Hero2'
 
-function News({ articles, fetchArticles, pages, fetchPages }) {
-    const [ page, setPage ] = useState(1);
-    const [ leftDisabled, setLeftDisabled ] = useState(false);
-    const [ rightDisabled, setRightDisabled ] = useState(false);
+function News({ articles, fetchArticles }) {
+    const router = useRouter();
+    const page = router.query.page;
+
+    const [ currentPage, setCurrentPage ] = useState(null);
 
     useEffect(() => {
-        fetchArticles(page);
-        fetchPages();
-
-        if (page === 1) {
-            setLeftDisabled(true)
-        } else {
-            setLeftDisabled(false)
+        if (page !== undefined) {
+            setCurrentPage(page);
+            fetchArticles(currentPage);
         }
-
-        if (page === pages) {
-            setRightDisabled(true)
-        } else {
-            setRightDisabled(false)
-        }
-    }, [page]);
+    }, [currentPage, page]);
 
     return (
         <div>
@@ -37,15 +30,28 @@ function News({ articles, fetchArticles, pages, fetchPages }) {
             </Head>
             <div>
                 <Header />
-                <Hero2 />
+                <Hero2 title="Najnovije vijesti" body="We always want to hear from you! Let us know how we can best help you and we'll do our very best." />
                 <ArticleList articles={articles} />
-                <div>
-                    <button className="mr-3" disabled={leftDisabled} onClick={() => setPage(page - 1)}>
-                        Left
-                    </button>
-                    <button disabled={rightDisabled} onClick={() => setPage(page + 1)}>
-                        Right
-                    </button>
+                <div className="container flex justify-between">
+                    <div>
+                        <button
+                            className="text-lg text-gray-400 mb-11"
+                            hidden={currentPage <= 1}
+                            onClick={() => Router.push(`/news?page=${+currentPage - 1}`)}
+                        >
+                            Prethodna
+                        </button>
+                    </div>
+                    <div></div>
+                    <div className="flex flex-row">
+                        <button
+                            className="text-lg text-gray-400 mb-11"
+                            hidden={articles.last_page !== undefined ? currentPage >= articles.last_page : ''}
+                            onClick={() => Router.push(`/news?page=${+currentPage + 1}`)}
+                        >
+                            Sledeca
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,13 +60,12 @@ function News({ articles, fetchArticles, pages, fetchPages }) {
 
 const mapStateToProps = state => {
     return {
-        articles: state.articles,
-        pages: state.pages
+        articles: state.articles
     };
 };
 
 export default connect(
     mapStateToProps,
-    { fetchArticles, fetchPages }
+    { fetchArticles }
 )(News);
 
