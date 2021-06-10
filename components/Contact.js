@@ -26,7 +26,7 @@ class Contact extends React.Component {
 
 
     onSubmit = formValues => {
-        console.log(formValues);
+        this.props.sendMail(formValues);
     };
 
     render() {
