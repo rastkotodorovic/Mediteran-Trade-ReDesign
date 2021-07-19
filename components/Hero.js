@@ -7,16 +7,16 @@ export default function Hero() {
                 <div className="lg:hidden">
                     <img src="/undraw_co-working_825n.svg" className="lg:ml-28" />
                 </div>
-                <div className="lg:w-1/2 pt-7">
+                <div className="lg:w-1/2 pt-7 lg:text-left text-center">
                     <h2 className="h1">
-                        Računovodstvene usluge na <br /> području Bosne i Hercegovine
+                        Računovodstvene usluge na području Bosne i Hercegovine
                     </h2>
-                    <p className="paragraph mt-10">
+                    <p className="paragraph lg:mt-10 mt-4">
                         Računovodstvena agencija Mediteran Cvijeta Panić vam pruža  veliki asortiman usluga: računovodstvo, knjigovodstvo, elektronsko poslovanje i brojne druge.
                     </p>
-                    <div className="mt-12">
+                    <div className="flex mt-12">
                         <Link href="/contact">
-                            <a className="btn btn-blue lg:mb-0 mb-3  mr-5">Kontaktirajte nas</a>
+                            <a className="btn btn-blue lg:mb-0 lg:mr-5">Kontaktirajte nas</a>
                         </Link>
                         <Link href="/about">
                             <a className="btn btn-white">Saznajte više</a>
@@ -33,7 +33,7 @@ export default function Hero() {
                         <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fillRule="evenodd"><path d="M0 0h24v24H0z"></path><path d="M7 3h10a4 4 0 110 8H7a4 4 0 110-8zm0 6a2 2 0 100-4 2 2 0 000 4z" fill="#335EEA"></path><path d="M7 13h10a4 4 0 110 8H7a4 4 0 110-8zm10 6a2 2 0 100-4 2 2 0 000 4z" fill="#335EEA" opacity=".3"></path></g></svg>
                     </div>
                     <h2 className="title mb-3">Izrada obračuna</h2>
-                    <p className="paragraph">Landkit is built to make your life easier. Variables, build tooling, documentation, and reusable components.</p>
+                    <p className="paragraph">This is built to make your life easier. Variables, build tooling, documentation, and reusable components.</p>
                 </div>
                 <div className="pb-6 lg:w-1/3 lg:pr-12"  data-aos="fade-down">
                     <div className="mb-3">

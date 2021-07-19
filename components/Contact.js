@@ -1,7 +1,9 @@
 import React from 'react';
-import { Field, reduxForm } from 'redux-form';
+import { Field, reduxForm, reset } from 'redux-form';
 import { connect } from "react-redux";
 import { sendMail } from '../redux/actions';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class Contact extends React.Component {
     renderInput({ input, placeholder, meta }) {
@@ -27,6 +29,7 @@ class Contact extends React.Component {
 
     onSubmit = formValues => {
         this.props.sendMail(formValues);
+        this.props.reset('contact');
     };
 
     render() {
@@ -38,7 +41,7 @@ class Contact extends React.Component {
                     </div>
                     <h2 className="title pb-4">Pošaljite nam poruku</h2>
                     <p className="paragraph mb-6">We can help you solve company communication.</p>
-                    <form onSubmit={ this.props.handleSubmit(this.onSubmit) } >
+                    <form onSubmit={ this.props.handleSubmit(this.onSubmit) } name="contact" >
                         <div className="lg:grid lg:grid-cols-2 lg:gap-6 lg:px-6 lg:py-6">
                             <Field name="name" component={ this.renderInput } placeholder="Ime" />
                             <Field name="email" component={ this.renderInput } placeholder="E-mail" />
@@ -54,6 +57,7 @@ class Contact extends React.Component {
                     </form>
                 </div>
                 <div className="contact-color h-96"></div>
+                <ToastContainer />
             </div>
         );
     }

@@ -1,4 +1,4 @@
-import {useRouter} from "next/router";
+import { toast } from "react-toastify";
 
 export const fetchArticles = page => async dispatch => {
     const response = await fetch(`http://localhost/api/articles?page=${page}`);
@@ -16,11 +16,18 @@ export const fetchArticle = id => async dispatch => {
 }
 
 export const sendMail = formValues => async dispatch => {
+    const name = formValues.name;
+    const email = formValues.email;
+    const message = formValues.message;
+
+    toast.info('Slanje mail-a...')
     const response = await fetch(
-        'http://localhost/contact/send-mail',
+        'http://localhost/api/contact/send-mail',
         {
             body: JSON.stringify({
-                formValues
+               name: name,
+               email: email,
+               message: message,
             }),
             headers: {
                 'Content-Type': 'application/json'
@@ -29,6 +36,7 @@ export const sendMail = formValues => async dispatch => {
         }
     )
     const mail = await response.json();
+    toast.success('Uspjesno ste poslali mail!')
 
     dispatch({ type: 'SEND_MAIL', payload: mail });
 }

@@ -26,7 +26,7 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li className="lg:pb-2 pb-4">
-                                <Link href="/">
+                                <Link href="/news?page=1">
                                     <a href="#" className="paragraph hover:text-gray-200 transition duration-100">Vijesti</a>
                                 </Link>
                             </li>
