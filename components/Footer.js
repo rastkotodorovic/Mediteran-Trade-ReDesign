@@ -40,10 +40,18 @@ export default function Footer() {
                     <div className="px-6">
                         <p className="text-gray-500 text-md pb-3">Services</p>
                         <ul>
-                            <li className="lg:pb-2 pb-4"><a className="paragraph hover:text-gray-200 transition duration-100">Documentation</a></li>
-                            <li className="lg:pb-2 pb-4"><a className="paragraph hover:text-gray-200 transition duration-100">Changelog</a></li>
-                            <li className="lg:pb-2 pb-4"><a className="paragraph hover:text-gray-200 transition duration-100">Pagebuilder</a></li>
-                            <li className="lg:pb-2 pb-4"><a className="paragraph hover:text-gray-200 transition duration-100">UI Kit</a></li>
+                            <li className="lg:pb-2 pb-4 paragraph hover:text-gray-200 transition duration-100">
+                                Documentation
+                            </li>
+                            <li className="lg:pb-2 pb-4 paragraph hover:text-gray-200 transition duration-100">
+                                Changelog
+                            </li>
+                            <li className="lg:pb-2 pb-4 paragraph hover:text-gray-200 transition duration-100">
+                                Pagebuilder
+                            </li>
+                            <li className="lg:pb-2 pb-4 paragraph hover:text-gray-200 transition duration-100">
+                                UI Kit
+                            </li>
                         </ul>
                     </div>
                 </div>
